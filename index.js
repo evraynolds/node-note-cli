@@ -12,4 +12,4 @@
 // };
 
 // console.log(newNote);
-import "./node-note-cli/src/command.js";
+import "./src/command.js";

@@ -7,10 +7,8 @@ jest.unstable_mockModule("../src/db.js", () => ({
   saveDB: jest.fn(),
 }));
 
-const { insertDB, getDB, saveDB } = await import("../node-note-cli/src/db.js");
-const { newNote, getAllNotes, removeNote } = await import(
-  "../node-note-cli/src/notes.js"
-);
+const { insertDB, getDB, saveDB } = await import("../src/db.js");
+const { newNote, getAllNotes, removeNote } = await import("../src/notes.js");
 
 beforeEach(() => {
   insertDB.mockClear();
